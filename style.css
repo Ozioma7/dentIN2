@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  
 }
 
 body {
@@ -18,6 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+ 
 }
 
 header {
@@ -31,8 +33,7 @@ header {
 }
 
 nav {
-  display: flex;
-  align-items: center;
+  position: relative;
 }
 
 .hamburger {
@@ -44,43 +45,48 @@ nav {
 .hamburger .line {
   width: 25px;
   height: 3px;
-  background: #13c0ebdc;
+  background-color: #13c0ebdc;
   margin: 4px 0;
 }
 
+/* Hide the menu initially */
 .nav-menu {
   display: none;
   list-style: none;
+  padding: 0;
+  margin: 0;
   position: absolute;
-  top: 100%;
-  right: 0;
-  background: #333;
-  padding: 1rem;
-  border-radius: 5px;
-  text-align: right;
-}
-
-.nav-menu.show {
-  display: block;
+  top: 0; /* Align the top of the menu with the hamburger icon */
+  left: 35px; /* Position the menu to the right of the hamburger icon */
+  background-color: white; /* Adjust based on your design */
+  box-shadow: 0 4px 8px rgba(81, 44, 184, 0.1);
+  z-index: 1000;
 }
 
 .nav-menu li {
-  margin: 1rem 0;
+  padding: 10px 20px;
 }
 
 .nav-menu li a {
-  color: #fff;
   text-decoration: none;
+  color: #13c0ebdc; /* Adjust based on your design */
 }
 
+/* Show the menu when the 'show' class is added */
+.nav-menu.show {
+  display: block;
+}
+.All{
+  background-color: rgb(50, 47, 62);
+}
 .get-started {
-  background: #f4f4f4;
+  color: #fff;
   padding: 2rem 0;
   text-align: center;
+  background-color: rgb(50, 47, 62);
 }
 
 .get-started .container {
-  background-color: #444668;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,10 +97,10 @@ nav {
 }
 
 .signup-button {
-  background-color: #333;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 2rem 6rem;
+  background-color: #fff;
+  color: #13c0ebdc;
+  font-size: 2rem;
+  padding: 1rem 5rem;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -105,23 +111,23 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 200px; 
+  margin: auto;
 }
 
 .store-button {
   background-color: #fff;
   border: none;
   border-radius: 30px;
-  padding: 0.5rem;
   cursor: pointer;
+  width: 150px;
 }
 
 .store-button img {
-  width: 100px; 
+  width: 10px; 
   height: auto;
 }
 
 .signup-professional {
-  background: #f4f4f4;
   padding: 2rem 0;
   text-align: center;
 }
@@ -141,19 +147,18 @@ nav {
 }
 
 .signup-professional-button {
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #13c0ebdc;
   font-size: 1.5rem;
   padding: 1.5rem 2rem;
   border: none;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: pointer;
   margin-bottom: 1rem;
+  
 }
 
 .signup-clinic {
-  background: #f4f4f4;
-  padding: 2rem 0;
   text-align: center;
 }
 
@@ -172,12 +177,12 @@ nav {
 }
 
 .signup-clinic-button {
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #13c0ebdc;
   font-size: 1.5rem;
   padding: 1.5rem 2rem;
   border: none;
-  border-radius: 20px; /* Increased border radius */
+  border-radius: 50px;
   cursor: pointer;
   margin-bottom: 1rem;
 }
@@ -186,25 +191,27 @@ nav {
 .additional-store-buttons {
   display: flex;
   justify-content: space-between;
-  width: 200px; /* Adjust as needed */
-  margin-top: 1rem;
+  width: 150px;
+  margin: 1rem;
+  margin-left: 3rem;
 }
 
 .store-button {
   background-color: #fff;
   border: none;
-  border-radius: 20px; /* Increased border radius */
+  border-radius: 20px;
   padding: 0.5rem;
   cursor: pointer;
 }
 
 .store-button img {
-  width: 100px; /* Adjust as needed */
+  display: flex;
+  justify-content: space-between;
+  width: 50px; 
   height: auto;
 }
 
 .toothache-reasons {
-  background: #f4f4f4;
   padding: 2rem 0;
   text-align: center;
 }
@@ -227,7 +234,7 @@ nav {
 
 
 .services {
-  background: #fff;
+  background: rgb(50, 47, 62);
   padding: 2rem 0;
   text-align: center;
 }
@@ -236,53 +243,8 @@ nav {
   margin-bottom: 1rem;
 }
 
-.team {
-  background: #fff;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.team h2 {
-  margin-bottom: 2rem;
-}
-
-.team .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.team-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-.team-member {
-  margin: 0 1rem;
-  text-align: center;
-}
-
-.team-member img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.team-member h3 {
-  margin-bottom: 0.5rem;
-}
-
-.team-member p {
-  margin-bottom: 0.5rem;
-  color: #13c0ebdc;
-}
 
 .contact {
-  background: #f4f4f4;
   padding: 2rem 0;
   text-align: center;
 }
@@ -308,16 +270,18 @@ nav {
 
 .contact form button {
   padding: 0.7rem;
-  background: #13c0ebdc;
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
 footer {
-  background: #13c0ebdc;
   color: #fff;
   text-align: center;
   padding: 1rem 0;
-  margin-top: 2rem;
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;
 }

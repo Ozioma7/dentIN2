@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dentIN - Welcome</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img
+          src="./img/dentIN_logo-01.png"
+          alt="Our Logo"
+          height="100px"
+          width="100px"
+        />
+        <nav>
+          <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <ul id="nav-menu" class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="All">
+      <section id="get-started" class="get-started">
+        <section class="container">
+          <section id="team" class="team">
+            <div class="container">
+                <h2>Meet Our Team</h2>
+                <div class="team-row">
+                    <div class="team-member">
+                        <img src="./img/caleb.PNG" alt="Team Member Photo">
+                        <h3>Caleb Godson</h3>
+                        <p>Product Designer</p>
+                        <p>Fellow ID: FE/23/51908737</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="./img/bassey.PNG" alt="Team Member Photo">
+                        <h3>Bassey Asuquo</h3>
+                        <p>Data Analyst/Team lead</p>
+                        <p>Fellow ID: FE/23/38794719</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="./img/amaka.PNG" alt="Team Member Photo">
+                        <h3>Amaka Molokwu</h3>
+                        <p>Quality Assurance Engineer</p>
+                        <p>Fellow ID: FE/23/80241516</p>
+                    </div>
+                </div>
+                <div class="team-row">
+                    <div class="team-member">
+                        <img src="./img/ozioma.PNG" alt="Team Member Photo">
+                        <h3>Ozioma Michael</h3>
+                        <p>Software Developer</p>
+                        <p>Fellow ID: FE/23/75266532</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="./img/blessing.PNG" alt="Team Member Photo">
+                        <h3>Blessing Nnamani</h3>
+                        <p>Product Manager</p>
+                        <p>Fellow ID: FE/23/28024371</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 dentIN. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const navMenu = document.getElementById("nav-menu");
+        navMenu.classList.toggle("show");
+      }
+    </script>
+    </section>
+  </body>
+</html>
